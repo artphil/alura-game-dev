@@ -12,13 +12,18 @@ class Cenario {
     this.imagem_y = 0;
   }
 
-  desenha() {
-    for (let i = 0; i < this.camadas; i++) {
+  desenha_fundo() {
+    for (let i = 0; i < this.camadas - 1; i++) {
       image(this.imagem[i], this.imagem1_x[i], this.imagem_y, width, height);
       image(this.imagem[i], this.imagem2_x[i], this.imagem_y, width, height);
     }
 
     this.move()
+  }
+
+  desenha_frente() {
+    image(this.imagem[this.camadas-1], this.imagem1_x[this.camadas-1], this.imagem_y, width, height);
+    image(this.imagem[this.camadas-1], this.imagem2_x[this.camadas-1], this.imagem_y, width, height);
   }
 
   move() {

@@ -1,15 +1,23 @@
 class Inimigo extends Objeto {
-  constructor(imagem, linhas, colunas, x, y, escala, velocidade) {
-    super(imagem, linhas, colunas, x, y, escala)
+  constructor(imagem, x, y, velocidade) {
+    super(imagem, x, y)
     this.veloc_x = velocidade;
   }
 
   anima() {
-    this.atual = (this.atual + 1) % this.posicoes.length;
-    if (this.img_x > 0) this.img_x -= this.veloc_x;
-    else this.img_x = width;
+    this.imagem.atual = (this.imagem.atual + 1) % this.imagem.posicoes.length;
+    this.img_x -= this.veloc_x;
+    
+    if (this.img_x > 0)
+      return 1;
+    else
+      return 0;
   }
-
+  
+  aparece() {
+    this.img_x = width;
+  }
+  
   acelera(valor) {
     this.veloc_x += valor;
   }
