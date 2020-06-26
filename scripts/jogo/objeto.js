@@ -21,4 +21,5 @@ class Objeto {
 
   anima() {} // Deve ser implementado no filhos
 
+  reset() {} // Deve ser implementado no filhos
 }
