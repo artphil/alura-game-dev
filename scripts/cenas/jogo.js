@@ -45,6 +45,7 @@ class Jogo extends Cena {
 
   restart() {
     this.fim_jogo = false;
+    this.pontos_fase = 20;
     velocidade_atual = this.velocidade_inicial;
     cenario.reset();
     personagem.reset();
@@ -55,7 +56,7 @@ class Jogo extends Cena {
     vida.reset();
     inimigo_maximo = this.inimigo_maximo;
     ultimos_inimigos = this.ultimos_inimigos;
-    trilha_sonora.loop();
+    soundtrack_game.loop();
   }
 
   draw() {
@@ -123,7 +124,7 @@ class Jogo extends Cena {
     if (!this.fim_jogo) {
       this.fim_jogo = true;
       velocidade_atual = 0;
-      trilha_sonora.stop();
+      soundtrack_game.stop();
       efeito_lose.play();
     }
   }

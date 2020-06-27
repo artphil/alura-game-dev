@@ -25,7 +25,7 @@ function preload() {
   fim_jogo_img = loadImage(fim_jogo_img_path);
   imagem_vida = loadImage(vida_img_path);
 
-  trilha_sonora = loadSound(trilha_jogo_path);
+  soundtrack_game = loadSound(soundtrack_game_path);
   efeito_pulo = loadSound(som_pulo_path);
   efeito_lose = loadSound(som_lose_path);
   

@@ -42,7 +42,7 @@ const imagens_floresta = [
 ];
 
 // Sons
-const trilha_jogo_path = 'assets/snds/trilha_jogo.mp3';
+const soundtrack_game_path = 'assets/snds/trilha_jogo.mp3';
 const som_pulo_path = 'assets/snds/sfx-jump-20.wav';
 const som_lose_path = 'assets/snds/lose.wav';
 
@@ -62,7 +62,7 @@ let fonte_inicio;
 let fonte_botao;
 
 // Sons 
-let trilha_sonora;
+let soundtrack_game;
 let efeito_pulo;
 let efeito_lose;
 
