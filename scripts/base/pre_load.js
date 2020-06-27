@@ -15,9 +15,10 @@ function preload() {
   
   imagem_personagem = loadImage(imagem_sakura);
   
-  imagem_inimigos.push(loadImage(imagem_slime));
-  imagem_inimigos.push(loadImage(imagem_flyer));
-  imagem_inimigos.push(loadImage(imagem_troll));
+  enemy_img_path.forEach(img_path => {
+    enemy_img.push(loadImage(img_path));
+  });
+  
   
   fim_jogo_img = loadImage(fim_jogo_img_path);
   imagem_vida = loadImage(vida_img_path);

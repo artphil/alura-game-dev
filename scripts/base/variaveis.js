@@ -1,8 +1,10 @@
 // Assets
 // Imagens
-const imagem_troll = 'assets/imgs/inimigos/troll.png'
-const imagem_flyer = 'assets/imgs/inimigos/flyer.png'
-const imagem_slime = 'assets/imgs/inimigos/slime.png'
+const enemy_img_path = [
+	'assets/imgs/inimigos/slime.png',
+	'assets/imgs/inimigos/flyer.png',
+	'assets/imgs/inimigos/troll.png'
+];
 
 const imagem_sakura = 'assets/imgs/personagem/sakura.png'
 
@@ -86,8 +88,8 @@ let imagem_personagem;
 let personagem;
 
 // Inimigos
-const imagem_inimigos = [];
-const sprite_inimigos = [];
+const enemy_img = [];
+const enemy_sprite = [];
 const inimigos = [];
 let ultimos_inimigos;
 let inimigo_maximo;
