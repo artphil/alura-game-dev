@@ -8,7 +8,7 @@ class Jogo extends Cena {
     velocidade_atual = this.velocidade_inicial;
 
     this.pontos_fase = 20;
-    this.inimigo_maximo = 4;
+    this.inimigo_maximo = 8;
     this.ultimos_inimigos = [0, 1, 0]
    }
 
@@ -27,17 +27,19 @@ class Jogo extends Cena {
    // Objetos
     personagem = new Personagem(character_sprite[0], 10, (height * 0.75) - chao, 0.25);
 
-    enemies.push(new Inimigo(enemy_sprite[0], width, (height * 0.9) - chao, 0.10, 1));
-    enemies.push(new Inimigo(enemy_sprite[0], width, (height * 0.87) - chao, 0.13, 2));
-    enemies.push(new Inimigo(enemy_sprite[0], -500, (height * 0.9) - chao, 0.10, 1));
-    enemies.push(new Inimigo(enemy_sprite[0], -500, (height * 0.85) - chao, 0.15, 1));
-    enemies.push(new Inimigo(enemy_sprite[0], -500, (height * 0.83) - chao, 0.17, 1));
-    enemies.push(new Inimigo(enemy_sprite[1], -500, (height * 0.6) - chao, 0.15, 1));
-    enemies.push(new Inimigo(enemy_sprite[1], -500, (height * 0.8) - chao, 0.15, 1));
-    enemies.push(new Inimigo(enemy_sprite[1], -500, (height * 0.7) - chao, 0.18, 1));
-    enemies.push(new Inimigo(enemy_sprite[1], -500, (height * 0.8) - chao, 0.20, 1));
-    enemies.push(new Inimigo(enemy_sprite[2], -500, (height * 0.6) - chao, 0.45, 1));
-    enemies.push(new Inimigo(enemy_sprite[2], -500, (height * 0.6) - chao, 0.45, 1));
+    enemies.push(new Inimigo(enemy_sprite[0], width, (height * 0.9) - chao, 0.10, 1)); //slime
+    enemies.push(new Inimigo(enemy_sprite[0], width, (height * 0.9) - chao, 0.10, 2)); //slime
+    enemies.push(new Inimigo(enemy_sprite[0], -500, (height * 0.87) - chao, 0.13, 1)); //slime
+    enemies.push(new Inimigo(enemy_sprite[0], -500, (height * 0.85) - chao, 0.15, 1)); //slime
+    enemies.push(new Inimigo(enemy_sprite[1], -500, (height * 0.6) - chao, 0.15, 1)); //flyer
+    enemies.push(new Inimigo(enemy_sprite[1], -500, (height * 0.8) - chao, 0.15, 1)); //flyer
+    enemies.push(new Inimigo(enemy_sprite[0], -500, (height * 0.83) - chao, 0.17, 1)); //slime
+    enemies.push(new Inimigo(enemy_sprite[1], -500, (height * 0.7) - chao, 0.18, 1)); //flyer
+    enemies.push(new Inimigo(enemy_sprite[2], -500, (height * 0.83) - chao, 0.20, 1)); //wolf
+    enemies.push(new Inimigo(enemy_sprite[1], -500, (height * 0.8) - chao, 0.20, 1)); //flyer
+    enemies.push(new Inimigo(enemy_sprite[2], -500, (height * 0.83) - chao, 0.20, 1)); //wolf
+    enemies.push(new Inimigo(enemy_sprite[3], -500, (height * 0.6) - chao, 0.45, 1)); //troll
+    enemies.push(new Inimigo(enemy_sprite[3], -500, (height * 0.6) - chao, 0.45, 1)); //troll
 
     item_vida = new Item(sprite_vida, -500, (height / 2), 0.1);
     vida = new Vida(sprite_vida, 3, 5);

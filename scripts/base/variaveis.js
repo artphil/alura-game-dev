@@ -3,6 +3,7 @@
 const enemy_img_path = [
 	'assets/imgs/inimigos/slime.png',
 	'assets/imgs/inimigos/flyer.png',
+	'assets/imgs/inimigos/wolf.png',
 	'assets/imgs/inimigos/troll.png'
 ];
 
