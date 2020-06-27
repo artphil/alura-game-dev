@@ -8,9 +8,9 @@ function gera_matriz(altura, largura, linhas, colunas) {
   return matriz;
 }
 
-function aleatorio(maximo, ultimo) {
+function aleatorio(maximo, ultimos) {
   let resultado = Math.floor(Math.random() * maximo);
-  while (resultado === ultimo[0] || resultado === ultimo[1])
+  while (ultimos.indexOf(resultado)>=0)
     resultado = Math.floor(Math.random() * maximo);
   
   return resultado;

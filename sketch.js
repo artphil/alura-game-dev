@@ -3,19 +3,24 @@ function setup() {
   // Tela
   // createCanvas(600, 400);
   createCanvas(windowWidth, windowHeight);
-  frameRate(30);
+  frameRate(40);
 
   // Cenas 
   jogo = new Jogo();
   inicio = new Inicio();
+  creditos = new Creditos();
 
   cenas = {
     jogo,
-    inicio
+    inicio,
+    creditos
   };
-
+  
+  cena_atual = 'inicio';
+  
   jogo.setup();
   inicio.setup();
+  creditos.setup();
 
 }
 

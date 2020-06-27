@@ -1,17 +1,25 @@
 class Personagem extends Objeto {
-  constructor(imagem, x, y) {
-    super(imagem, x, y)
+  constructor(imagem, x, y, escala) {
+    super(imagem, x, y, escala)
 
     this.veloc_y = 0;
     this.gravidade = height / 150;
     this.pulou = 0;
+    this.invencivel = false;
   }
 
   anima() {
-    if (velocidade_atual > 0 && this.pulou === 0)
-      this.imagem.atual = (this.imagem.atual + 1) % this.imagem.posicoes.length;
-    else this.imagem.atual = 0;
+    if (velocidade_atual === 0) return 0;
+
+    if (this.pulou === 0) {
+      this.imagem.proximo();
+    } else {
+      this.imagem.atual = 0;
+    }
+
     this.acao_gravidade()
+
+    this.pisca = this.invencivel;
   }
 
   acao_gravidade() {
@@ -36,7 +44,7 @@ class Personagem extends Objeto {
 
   direita() {
     if (velocidade_atual > 0)
-      if (this.img_x < (width - this.imagem.dx))
+      if (this.img_x < (width - this.dx))
         this.img_x += this.veloc_x;
   }
 
@@ -55,20 +63,33 @@ class Personagem extends Objeto {
   }
 
   colide(inimigos) {
-    let colidiu = false;
-    // noFill();
-    // circle(this.img_x+(this.imagem.dx/2),this.img_y+(this.imagem.dy/2),this.imagem.dy/2);
+    if (velocidade_atual === 0)
+      return false;
 
+    let colidiu = false;
+
+    // console.log(this.invencivel);
+    if (this.invencivel)
+      return false;
+
+
+    let colisor = false;
+    let precisao = 0.7;
+
+    if (colisor) {
+      circle(this.img_x + (this.dx * precisao), this.img_y + (this.dy * precisao), this.dy * precisao);
+    }
     inimigos.forEach(inimigo => {
-      // circle(inimigo.img_x+(inimigo.imagem.dx/2),inimigo.img_y+(inimigo.imagem.dy/2),inimigo.imagem.dy/2);
+      if (colisor)
+        circle(inimigo.img_x + (inimigo.dx * precisao), inimigo.img_y + (inimigo.dy * precisao), inimigo.dy * precisao);
 
       if (collideCircleCircle(
-          this.img_x + (this.imagem.dx / 2),
-          this.img_y + (this.imagem.dy / 2),
-          this.imagem.dy / 2,
-          inimigo.img_x + (inimigo.imagem.dx / 2),
-          inimigo.img_y + (inimigo.imagem.dy / 2),
-          inimigo.imagem.dy / 2)) {
+          this.img_x + (this.dx * precisao),
+          this.img_y + (this.dy * precisao),
+          this.dy * precisao,
+          inimigo.img_x + (inimigo.dx * precisao),
+          inimigo.img_y + (inimigo.dy * precisao),
+          inimigo.dy * precisao)) {
         // console.log('collide')
         colidiu = true;
       }
@@ -79,6 +100,14 @@ class Personagem extends Objeto {
   reset() {
     this.img_x = 0;
     this.img_y = this.img_y_base
+    this.invencivel = false;
+  }
+
+  fica_invencivel() {
+    this.invencivel = true;
+    setTimeout(() => {
+      this.invencivel = false;
+    }, 1000);
   }
 
 }
