@@ -1,50 +1,50 @@
 // Assets
 // Imagens
-const imagem_troll = 'imagens/inimigos/troll.png'
-const imagem_flyer = 'imagens/inimigos/flyer.png'
-const imagem_slime = 'imagens/inimigos/slime.png'
+const imagem_troll = 'assets/imgs/inimigos/troll.png'
+const imagem_flyer = 'assets/imgs/inimigos/flyer.png'
+const imagem_slime = 'assets/imgs/inimigos/slime.png'
 
-const imagem_sakura = 'imagens/personagem/sakura.png'
+const imagem_sakura = 'assets/imgs/personagem/sakura.png'
 
-const fim_jogo_img_path = 'imagens/assets/game-over.png';
-const vida_img_path = 'imagens/assets/coracao.png';
+const fim_jogo_img_path = 'assets/imgs/assets/game-over.png';
+const vida_img_path = 'assets/imgs/assets/coracao.png';
 
-let inicio_img_path = 'imagens/cenario/telaInicial.png';
+let inicio_img_path = 'assets/imgs/cenario/telaInicial.png';
 const imagens_floresta = [
-  ['imagens/cenario/floresta_1.png',
-  'imagens/cenario/floresta_2.png',
-  'imagens/cenario/floresta_3.png',
-  'imagens/cenario/floresta_4.png',
-  'imagens/cenario/floresta_5.png'
+  ['assets/imgs/cenario/floresta_1.png',
+  'assets/imgs/cenario/floresta_2.png',
+  'assets/imgs/cenario/floresta_3.png',
+  'assets/imgs/cenario/floresta_4.png',
+  'assets/imgs/cenario/floresta_5.png'
 ],
-    ['imagens/cenario/floresta2_1.png',
-  'imagens/cenario/floresta2_2.png',
-  'imagens/cenario/floresta2_3.png',
-  'imagens/cenario/floresta2_4.png',
-  'imagens/cenario/floresta2_5.png'
+    ['assets/imgs/cenario/floresta2_1.png',
+  'assets/imgs/cenario/floresta2_2.png',
+  'assets/imgs/cenario/floresta2_3.png',
+  'assets/imgs/cenario/floresta2_4.png',
+  'assets/imgs/cenario/floresta2_5.png'
 ],
-    ['imagens/cenario/floresta3_1.png',
-  'imagens/cenario/floresta3_2.png',
-  'imagens/cenario/floresta3_3.png',
-  'imagens/cenario/floresta3_4.png',
-  'imagens/cenario/floresta3_5.png'
+    ['assets/imgs/cenario/floresta3_1.png',
+  'assets/imgs/cenario/floresta3_2.png',
+  'assets/imgs/cenario/floresta3_3.png',
+  'assets/imgs/cenario/floresta3_4.png',
+  'assets/imgs/cenario/floresta3_5.png'
 ],
-    ['imagens/cenario/floresta4_1.png',
-  'imagens/cenario/floresta4_2.png',
-  'imagens/cenario/floresta4_3.png',
-  'imagens/cenario/floresta4_4.png',
-  'imagens/cenario/floresta4_5.png'
+    ['assets/imgs/cenario/floresta4_1.png',
+  'assets/imgs/cenario/floresta4_2.png',
+  'assets/imgs/cenario/floresta4_3.png',
+  'assets/imgs/cenario/floresta4_4.png',
+  'assets/imgs/cenario/floresta4_5.png'
 ]
 ];
 
 // Sons
-const trilha_jogo_path = 'sons/trilha_jogo.mp3';
-const som_pulo_path = 'sons/sfx-jump-20.wav';
-const som_lose_path = 'sons/lose.wav';
+const trilha_jogo_path = 'assets/snds/trilha_jogo.mp3';
+const som_pulo_path = 'assets/snds/sfx-jump-20.wav';
+const som_lose_path = 'assets/snds/lose.wav';
 
 // Fontes
-let fonte_inicio_path = 'fontes/fonteTelaInicial.otf';
-let fonte_botao_path = 'fontes/IMMORTAL.ttf';
+let fonte_inicio_path = 'assets/fnts/fonteTelaInicial.otf';
+let fonte_botao_path = 'assets/fnts/IMMORTAL.ttf';
 
 // Cenas
 let inicio;
