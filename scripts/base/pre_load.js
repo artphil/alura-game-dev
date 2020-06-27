@@ -13,8 +13,10 @@ function preload() {
     imagens_cenario.push(load_img);
   });
   
-  imagem_personagem = loadImage(imagem_sakura);
-  
+  character_img_path.forEach(img_path => {
+    character_img.push(loadImage(img_path));
+  });
+
   enemy_img_path.forEach(img_path => {
     enemy_img.push(loadImage(img_path));
   });

@@ -6,7 +6,9 @@ const enemy_img_path = [
 	'assets/imgs/inimigos/troll.png'
 ];
 
-const imagem_sakura = 'assets/imgs/personagem/sakura.png'
+const character_img_path = [
+	'assets/imgs/personagem/sakura.png'
+];
 
 const fim_jogo_img_path = 'assets/imgs/assets/game-over.png';
 const vida_img_path = 'assets/imgs/assets/coracao.png';
@@ -83,13 +85,14 @@ let chao;
 let pontos;
 
 // Personagens
-let sprite_personagem;
-let imagem_personagem;
+const character_img = [];
+const character_sprite = [];
+const characters = [];
 let personagem;
 
 // Inimigos
 const enemy_img = [];
 const enemy_sprite = [];
-const inimigos = [];
+const enemies = [];
 let ultimos_inimigos;
 let inimigo_maximo;

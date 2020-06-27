@@ -10,7 +10,7 @@ class Jogo extends Cena {
     this.pontos_fase = 20;
     this.inimigo_maximo = 4;
     this.ultimos_inimigos = [0, 1, 0]
-  }
+   }
 
   setup() {
     // Variaveis
@@ -25,19 +25,19 @@ class Jogo extends Cena {
 
 
    // Objetos
-    personagem = new Personagem(sprite_personagem, 10, (height * 0.75) - chao, 0.25);
+    personagem = new Personagem(character_sprite[0], 10, (height * 0.75) - chao, 0.25);
 
-    inimigos.push(new Inimigo(enemy_sprite[0], width, (height * 0.9) - chao, 0.10, 1));
-    inimigos.push(new Inimigo(enemy_sprite[0], width, (height * 0.87) - chao, 0.13, 2));
-    inimigos.push(new Inimigo(enemy_sprite[0], -500, (height * 0.9) - chao, 0.10, 1));
-    inimigos.push(new Inimigo(enemy_sprite[0], -500, (height * 0.85) - chao, 0.15, 1));
-    inimigos.push(new Inimigo(enemy_sprite[0], -500, (height * 0.83) - chao, 0.17, 1));
-    inimigos.push(new Inimigo(enemy_sprite[1], -500, (height * 0.6) - chao, 0.15, 1));
-    inimigos.push(new Inimigo(enemy_sprite[1], -500, (height * 0.8) - chao, 0.15, 1));
-    inimigos.push(new Inimigo(enemy_sprite[1], -500, (height * 0.7) - chao, 0.18, 1));
-    inimigos.push(new Inimigo(enemy_sprite[1], -500, (height * 0.8) - chao, 0.20, 1));
-    inimigos.push(new Inimigo(enemy_sprite[2], -500, (height * 0.6) - chao, 0.45, 1));
-    inimigos.push(new Inimigo(enemy_sprite[2], -500, (height * 0.6) - chao, 0.45, 1));
+    enemies.push(new Inimigo(enemy_sprite[0], width, (height * 0.9) - chao, 0.10, 1));
+    enemies.push(new Inimigo(enemy_sprite[0], width, (height * 0.87) - chao, 0.13, 2));
+    enemies.push(new Inimigo(enemy_sprite[0], -500, (height * 0.9) - chao, 0.10, 1));
+    enemies.push(new Inimigo(enemy_sprite[0], -500, (height * 0.85) - chao, 0.15, 1));
+    enemies.push(new Inimigo(enemy_sprite[0], -500, (height * 0.83) - chao, 0.17, 1));
+    enemies.push(new Inimigo(enemy_sprite[1], -500, (height * 0.6) - chao, 0.15, 1));
+    enemies.push(new Inimigo(enemy_sprite[1], -500, (height * 0.8) - chao, 0.15, 1));
+    enemies.push(new Inimigo(enemy_sprite[1], -500, (height * 0.7) - chao, 0.18, 1));
+    enemies.push(new Inimigo(enemy_sprite[1], -500, (height * 0.8) - chao, 0.20, 1));
+    enemies.push(new Inimigo(enemy_sprite[2], -500, (height * 0.6) - chao, 0.45, 1));
+    enemies.push(new Inimigo(enemy_sprite[2], -500, (height * 0.6) - chao, 0.45, 1));
 
     item_vida = new Item(sprite_vida, -500, (height / 2), 0.1);
     vida = new Vida(sprite_vida, 3, 5);
@@ -48,7 +48,7 @@ class Jogo extends Cena {
     velocidade_atual = this.velocidade_inicial;
     cenario.reset();
     personagem.reset();
-    inimigos.forEach(inimigo => {
+    enemies.forEach(inimigo => {
       inimigo.reset();
     });
     pontos.reset();
@@ -74,7 +74,7 @@ class Jogo extends Cena {
     pontos.exibe();
     pontos.add();
     personagem.desenha();
-    inimigos.forEach(inimigo => {
+    enemies.forEach(inimigo => {
       inimigos_na_tela += inimigo.desenha();
     });
     cenario.desenha_frente();
@@ -87,7 +87,7 @@ class Jogo extends Cena {
     if (keyIsDown(RIGHT_ARROW)) personagem.direita();
 
     // testa colisao
-    if (personagem.colide(inimigos)) {
+    if (personagem.colide(enemies)) {
       vida.perde()
       personagem.fica_invencivel()
       // console.log("colidiu");
@@ -109,7 +109,7 @@ class Jogo extends Cena {
 
       // console.log(i);
 
-      inimigos[i].aparece(random(1, 3));
+      enemies[i].aparece(random(1, 3));
     }
   }
 
@@ -131,8 +131,8 @@ class Jogo extends Cena {
   passa_fase() {
     this.pontos_fase += 20;
     inimigo_maximo += 2;
-    if (inimigo_maximo > inimigos.length)
-      inimigo_maximo = inimigos.length;
+    if (inimigo_maximo > enemies.length)
+      inimigo_maximo = enemies.length;
     cenario.muda_cenario();
     vida.ganha()
   }

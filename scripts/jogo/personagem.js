@@ -62,7 +62,7 @@ class Personagem extends Objeto {
     }
   }
 
-  colide(inimigos) {
+  colide(enemies) {
     if (velocidade_atual === 0)
       return false;
 
@@ -79,7 +79,7 @@ class Personagem extends Objeto {
     if (colisor) {
       circle(this.img_x + (this.dx * precisao), this.img_y + (this.dy * precisao), this.dy * precisao);
     }
-    inimigos.forEach(inimigo => {
+    enemies.forEach(inimigo => {
       if (colisor)
         circle(inimigo.img_x + (inimigo.dx * precisao), inimigo.img_y + (inimigo.dy * precisao), inimigo.dy * precisao);
 

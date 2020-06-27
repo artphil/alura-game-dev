@@ -1,6 +1,6 @@
 function load_sprites() {
 	// Sprites
-	sprite_personagem = new Sprite(imagem_personagem, 4, 4, 16, 1);
+	character_sprite.push(new Sprite(character_img[0], 4, 4, 16, 1));
 
 	enemy_sprite.push(new Sprite(enemy_img[0], 7, 4, 28, 1));
 	enemy_sprite.push(new Sprite(enemy_img[1], 6, 3, 16, 3));
