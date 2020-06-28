@@ -2,7 +2,7 @@ class Inicio extends Cena {
   constructor() {
     super();
     this.botao_jogo = new BotaoCena('Começar', width / 2, 2 * height / 3, 'jogo')
-    this.botao_creditos = new BotaoCena('Creditos', width / 7, height / 5, 'creditos')
+    this.botao_creditos = new BotaoCena('Créditos', width / 7, height / 5, 'creditos')
   }
 
   setup() {

@@ -1,8 +1,8 @@
 class Creditos extends Cena {
 	constructor() {
 		super();
-		this.botao = new BotaoCena('Inicio', width / 2, 6 * height / 7, 'inicio')
-		this.historia = 'A progarmadora otaku Hipsta desmaiou no sofá após uma longa maratona de anime. Não sabe se morreu ou está sonhado, mas acordou em uma floresta repleta de criatuas fantásticas. Ela vai ter que correr muito para sobreviver a essa aventura.'
+		this.botao = new BotaoCena('Início', width / 2, 6 * height / 7, 'inicio')
+		this.historia = 'A programadora otaku Hipsta desmaiou no sofá após uma longa maratona de anime. Sem saber se havia morrido ou se era apenas um sonho, ela se viu em uma floresta repleta de criaturas fantásticas. Ela terá que correr muito para sobreviver a essa aventura.'
 	}
 
 	setup() {
@@ -31,7 +31,7 @@ class Creditos extends Cena {
 
 		textSize(this.tamanho_titulo);
 		text('hipsta', width / 2, height / 3);
-
+		
 		textFont(fonte_botao);
 
 		textSize(this.tamanho_texto);

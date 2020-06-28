@@ -1,7 +1,7 @@
 class Game_over extends Cena {
   constructor() {
     super();
-    this.botao = new BotaoCena('Inicio', width / 2, 6 * height / 7, 'inicio')
+    this.botao = new BotaoCena('Início', width / 2, 6 * height / 7, 'inicio')
   }
 
   setup() {
