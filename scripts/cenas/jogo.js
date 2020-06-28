@@ -1,7 +1,7 @@
 class Jogo extends Cena {
   constructor() {
     super();
-    this.botao = new BotaoCena('Voltar', width / 7, height / 5, 'creditos')
+    this.botao = new BotaoCena('Voltar', width / 7, height / 5, 'game_over')
     this.fim_jogo = false;
     this.velocidade_inicial = width / 100;
 

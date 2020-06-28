@@ -11,11 +11,13 @@ function setup() {
 	jogo = new Jogo();
 	inicio = new Inicio();
 	creditos = new Creditos();
+	game_over = new Game_over();
 
 	cenas = {
 		jogo,
 		inicio,
-		creditos
+		creditos,
+		game_over
 	};
 
 	cena_atual = 'inicio';
@@ -23,7 +25,7 @@ function setup() {
 	jogo.setup();
 	inicio.setup();
 	creditos.setup();
-
+	game_over.setup();
 }
 
 // Listernin

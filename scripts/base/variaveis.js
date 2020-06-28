@@ -55,6 +55,8 @@ let fonte_botao_path = 'assets/fnts/IMMORTAL.ttf';
 let inicio;
 let jogo;
 let creditos;
+let game_over;
+
 let cenas;
 let cena_atual;
 
