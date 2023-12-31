@@ -37,7 +37,9 @@ function keyPressed() {
 function mousePressed() {
 	cenas[cena_atual].mousePress();
 }
-
+function touchStarted() {
+	cenas[cena_atual].touchPress();
+}
 
 // Desenho do frame
 function draw() {
