@@ -47,7 +47,7 @@ class Jogo extends Cena {
 
   restart() {
     this.fim_jogo = false;
-    this.pontos_fase = 20;
+    this.pontos_fase = 30;
     velocidade_atual = this.velocidade_inicial;
     cenario.reset();
     personagem.reset();
