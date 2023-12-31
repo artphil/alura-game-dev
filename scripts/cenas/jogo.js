@@ -10,7 +10,7 @@ class Jogo extends Cena {
     this.pontos_fase = 20;
     this.inimigo_maximo = 8;
     this.ultimos_inimigos = [0, 1, 0]
-   }
+  }
 
   setup() {
     // Variaveis
@@ -22,10 +22,12 @@ class Jogo extends Cena {
     // Cenario
     cenario = new Cenario(imagens_cenario, velocidade_inicial);
     pontos = new Pontuacao();
+
+    // Disabilita duplo click
     this.doubleClicked(false)
 
 
-   // Objetos
+    // Objetos
     personagem = new Personagem(character_sprite[0], 10, (height * 0.75) - chao, 0.25);
 
     enemies.push(new Inimigo(enemy_sprite[0], width, (height * 0.9) - chao, 0.10, 1)); //slime
@@ -124,7 +126,7 @@ class Jogo extends Cena {
   }
 
   touchPress() {
-  personagem.pula();  
+    personagem.pula();
   }
 
   termina_jogo() {
@@ -145,7 +147,7 @@ class Jogo extends Cena {
     vida.ganha()
   }
 
-  
+
   acelera() {
     if (velocidade_atual > 0)
       velocidade_atual += aceleracao;
