@@ -22,6 +22,7 @@ class Jogo extends Cena {
     // Cenario
     cenario = new Cenario(imagens_cenario, velocidade_inicial);
     pontos = new Pontuacao();
+    this.doubleClicked(false)
 
 
    // Objetos
