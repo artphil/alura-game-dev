@@ -2,9 +2,17 @@
 // Imagens
 const enemy_img_path = [
 	'assets/imgs/inimigos/slime.png',
+	'assets/imgs/inimigos/slime_blue.png',
 	'assets/imgs/inimigos/flyer.png',
-	'assets/imgs/inimigos/wolf.png',
-	'assets/imgs/inimigos/troll.png'
+	'assets/imgs/inimigos/slime_green.png',
+	'assets/imgs/inimigos/flyer_pink.png',
+	'assets/imgs/inimigos/slime_yellow.png',
+	'assets/imgs/inimigos/flyer_silver.png',
+	'assets/imgs/inimigos/slime_red.png',
+	'assets/imgs/inimigos/flyer_gold.png',
+	'assets/imgs/inimigos/slime_purple.png',
+	'assets/imgs/inimigos/flyer_black.png',
+	'assets/imgs/inimigos/slime_devil.png',
 ];
 
 const character_img_path = [

@@ -8,8 +8,9 @@ class Jogo extends Cena {
     velocidade_atual = this.velocidade_inicial;
 
     this.pontos_fase = 20;
-    this.inimigo_maximo = 8;
-    this.ultimos_inimigos = [0, 1, 0]
+    this.inimigo_maximo = 3;
+    // this.ultimos_inimigos = [0, 1, 0]
+    this.contador = 0;
   }
 
   setup() {
@@ -17,7 +18,7 @@ class Jogo extends Cena {
     chao = height * 0.07;
     velocidade_inicial = this.velocidade_inicial;
     inimigo_maximo = this.inimigo_maximo;
-    ultimos_inimigos = this.ultimos_inimigos;
+    // ultimos_inimigos = this.ultimos_inimigos;
 
     // Cenario
     cenario = new Cenario(imagens_cenario, velocidade_inicial);
@@ -27,19 +28,20 @@ class Jogo extends Cena {
     // Objetos
     personagem = new Personagem(character_sprite[0], 10, (height * 0.75) - chao, 0.25);
 
-    enemies.push(new Inimigo(enemy_sprite[0], width, (height * 0.9) - chao, 0.10, 1)); //slime
-    enemies.push(new Inimigo(enemy_sprite[0], width, (height * 0.9) - chao, 0.10, 2)); //slime
-    enemies.push(new Inimigo(enemy_sprite[0], -500, (height * 0.87) - chao, 0.13, 1)); //slime
-    enemies.push(new Inimigo(enemy_sprite[0], -500, (height * 0.85) - chao, 0.15, 1)); //slime
-    enemies.push(new Inimigo(enemy_sprite[1], -500, (height * 0.6) - chao, 0.15, 1)); //flyer
-    enemies.push(new Inimigo(enemy_sprite[1], -500, (height * 0.8) - chao, 0.15, 1)); //flyer
-    enemies.push(new Inimigo(enemy_sprite[0], -500, (height * 0.83) - chao, 0.17, 1)); //slime
-    enemies.push(new Inimigo(enemy_sprite[1], -500, (height * 0.7) - chao, 0.18, 1)); //flyer
-    enemies.push(new Inimigo(enemy_sprite[2], -500, (height * 0.83) - chao, 0.20, 1)); //wolf
-    enemies.push(new Inimigo(enemy_sprite[1], -500, (height * 0.8) - chao, 0.20, 1)); //flyer
-    enemies.push(new Inimigo(enemy_sprite[2], -500, (height * 0.83) - chao, 0.20, 1)); //wolf
-    enemies.push(new Inimigo(enemy_sprite[3], -500, (height * 0.6) - chao, 0.45, 1)); //troll
-    enemies.push(new Inimigo(enemy_sprite[3], -500, (height * 0.6) - chao, 0.45, 1)); //troll
+    // Inimigo(imagem, x, y, escala, fator)
+    enemies.push(new Inimigo(enemy_sprite[0], (width * 1.2), (height * 0.9) - chao, 0.12, 1)); //slime
+    enemies.push(new Inimigo(enemy_sprite[0], (width * 1.2), (height * 0.9) - chao, 0.12, 1.5)); //slime
+    enemies.push(new Inimigo(enemy_sprite[1], (width * 1.2), (height * 0.9) - chao, 0.12, 1)); //slime blue
+    enemies.push(new Inimigo(enemy_sprite[2], (width * 1.2), (height * 0.6) - chao, 0.15, 1)); //flyer 
+    enemies.push(new Inimigo(enemy_sprite[3], (width * 1.2), (height * 0.9) - chao, 0.12, 1)); //slime green
+    enemies.push(new Inimigo(enemy_sprite[4], (width * 1.2), (height * 0.6) - chao, 0.15, 1)); //flyer pink
+    enemies.push(new Inimigo(enemy_sprite[5], (width * 1.2), (height * 0.9) - chao, 0.12, 1)); //slime yellow
+    enemies.push(new Inimigo(enemy_sprite[6], (width * 1.2), (height * 0.6) - chao, 0.15, 1)); //flyer silver
+    enemies.push(new Inimigo(enemy_sprite[7], (width * 1.2), (height * 0.9) - chao, 0.12, 1)); //slime red 
+    enemies.push(new Inimigo(enemy_sprite[8], (width * 1.2), (height * 0.6) - chao, 0.15, 1)); //flyer gold
+    enemies.push(new Inimigo(enemy_sprite[9], (width * 1.2), (height * 0.9) - chao, 0.12, 1)); //slime purple
+    enemies.push(new Inimigo(enemy_sprite[10], (width * 1.2), (height * 0.6) - chao, 0.15, 1)); //flyer black
+    enemies.push(new Inimigo(enemy_sprite[11], (width * 1.2), (height * 0.9) - chao, 0.12, 1)); //slime devil
 
     item_vida = new Item(sprite_vida, -500, (height / 2), 0.1);
     vida = new Vida(sprite_vida, 3, 5);
@@ -57,7 +59,7 @@ class Jogo extends Cena {
     pontos.reset();
     vida.reset();
     inimigo_maximo = this.inimigo_maximo;
-    ultimos_inimigos = this.ultimos_inimigos;
+    // ultimos_inimigos = this.ultimos_inimigos;
     soundtrack_game.loop();
   }
 
@@ -106,14 +108,22 @@ class Jogo extends Cena {
 
     // Chama inimigo
     if (inimigos_na_tela < 2) {
-      let i = aleatorio(inimigo_maximo, ultimos_inimigos);
-      ultimos_inimigos.shift();
-      ultimos_inimigos.push(i);
+      if (this.contador < 0) {
+        this.contador = 30;
 
-      // console.log(i);
+        let i = aleatorio(inimigo_maximo);
+        // let i = aleatorio(inimigo_maximo, ultimos_inimigos);
+        // ultimos_inimigos.shift();
+        // ultimos_inimigos.push(i);
 
-      enemies[i].aparece(Math.pow(1.15, i));
-      // enemies[i].aparece(random(1, 3));
+        // console.log(i);
+
+        enemies[i].aparece(Math.pow(1.15, i));
+        // enemies[i].aparece(random(1, 3));
+      } 
+      else {
+        this.contador -= 1;
+      }
     }
   }
 
@@ -138,7 +148,7 @@ class Jogo extends Cena {
 
   passa_fase() {
     this.pontos_fase += 20;
-    inimigo_maximo += 2;
+    inimigo_maximo += 1;
     if (inimigo_maximo > enemies.length)
       inimigo_maximo = enemies.length;
     cenario.muda_cenario();
