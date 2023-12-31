@@ -2,7 +2,9 @@
 function setup() {
 	// Tela
 	// createCanvas(600, 400);
-	createCanvas(windowWidth, windowHeight);
+	var w = window.innerWidth
+	var h = window.innerHeight
+	createCanvas(w, h);
 	frameRate(40);
 
 	load_sprites()
