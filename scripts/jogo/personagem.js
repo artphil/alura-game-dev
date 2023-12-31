@@ -43,15 +43,15 @@ class Personagem extends Objeto {
   }
 
   direita() {
-    if (velocidade_atual > 0)
-      if (this.img_x < (width - this.dx))
-        this.img_x += this.veloc_x;
+    // if (velocidade_atual > 0)
+    //   if (this.img_x < (width - this.dx))
+    //     this.img_x += this.veloc_x;
   }
 
   esquerda() {
-    if (velocidade_atual > 0)
-      if (this.img_x > 0)
-        this.img_x -= this.veloc_x;
+    // if (velocidade_atual > 0)
+    //   if (this.img_x > 0)
+    //     this.img_x -= this.veloc_x;
   }
 
   pula() {
@@ -84,12 +84,12 @@ class Personagem extends Objeto {
         circle(inimigo.img_x + (inimigo.dx * precisao), inimigo.img_y + (inimigo.dy * precisao), inimigo.dy * precisao);
 
       if (collideCircleCircle(
-          this.img_x + (this.dx * precisao),
-          this.img_y + (this.dy * precisao),
-          this.dy * precisao,
-          inimigo.img_x + (inimigo.dx * precisao),
-          inimigo.img_y + (inimigo.dy * precisao),
-          inimigo.dy * precisao)) {
+        this.img_x + (this.dx * precisao),
+        this.img_y + (this.dy * precisao),
+        this.dy * precisao,
+        inimigo.img_x + (inimigo.dx * precisao),
+        inimigo.img_y + (inimigo.dy * precisao),
+        inimigo.dy * precisao)) {
         // console.log('collide')
         colidiu = true;
       }
@@ -98,7 +98,7 @@ class Personagem extends Objeto {
   }
 
   reset() {
-    this.img_x = 0;
+    this.img_x = width / 3;
     this.img_y = this.img_y_base
     this.invencivel = false;
   }

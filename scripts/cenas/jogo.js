@@ -112,12 +112,13 @@ class Jogo extends Cena {
 
       // console.log(i);
 
-      enemies[i].aparece(random(1, 3));
+      enemies[i].aparece(Math.pow(1.15, i));
+      // enemies[i].aparece(random(1, 3));
     }
   }
 
   keyPress() {
-    if (keyCode === CONTROL) {
+    if (keyCode === CONTROL || keyCode === 32) {
       personagem.pula();
     }
   }

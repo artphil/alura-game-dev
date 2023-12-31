@@ -5,7 +5,7 @@ function setup() {
 	var w = window.innerWidth
 	var h = window.innerHeight
 	createCanvas(w, h);
-	frameRate(40);
+	frameRate(30);
 
 	load_sprites()
 

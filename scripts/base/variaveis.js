@@ -83,7 +83,7 @@ let vida;
 
 let velocidade_inicial;
 let velocidade_atual;
-let aceleracao = 0.01;
+let aceleracao = 0.005;
 let chao;
 let pontos;
 

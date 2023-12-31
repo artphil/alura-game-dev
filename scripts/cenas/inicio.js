@@ -29,7 +29,7 @@ class Inicio extends Cena {
     textFont(fonte_botao);
     textSize(this.tamanho_legenda);
     textAlign(LEFT);
-    text('Ctrl : Pula | <- : Esquerda | -> : Direita', 0, height-this.tamanho_legenda);
+    text('Pula (Jump): CTRL | SPACE ', 0, height-this.tamanho_legenda);
     
     fill('#000')
     textFont(fonte_inicio);
