@@ -122,6 +122,10 @@ class Jogo extends Cena {
     }
   }
 
+  mousePress() {
+  personagem.pula();  
+  }
+  
   termina_jogo() {
     if (!this.fim_jogo) {
       this.fim_jogo = true;
