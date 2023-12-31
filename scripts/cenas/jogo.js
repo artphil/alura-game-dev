@@ -23,9 +23,6 @@ class Jogo extends Cena {
     cenario = new Cenario(imagens_cenario, velocidade_inicial);
     pontos = new Pontuacao();
 
-    // Disabilita duplo click
-    this.doubleClicked(false)
-
 
     // Objetos
     personagem = new Personagem(character_sprite[0], 10, (height * 0.75) - chao, 0.25);
