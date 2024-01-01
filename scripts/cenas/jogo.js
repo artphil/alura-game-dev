@@ -95,7 +95,9 @@ class Jogo extends Cena {
     pontos.add();
     personagem.desenha();
     enemies.forEach(inimigo => {
-      inimigos_na_tela += inimigo.desenha();
+      let esta_na_tela = inimigo.desenha();
+      inimigos_na_tela += esta_na_tela;
+      inimigo.na_tela = esta_na_tela > 0;
     });
     cenario.desenha_frente();
 
@@ -127,10 +129,9 @@ class Jogo extends Cena {
         this.contador = 30;
 
         let i = aleatorio(inimigo_maximo);
-        // let i = aleatorio(inimigo_maximo, ultimos_inimigos);
-        // ultimos_inimigos.shift();
-        // ultimos_inimigos.push(i);
-
+        while (enemies[i].na_tela) {
+          i = aleatorio(inimigo_maximo);
+        }
         // console.log(i);
 
         enemies[i].aparece(Math.pow(1.15, i));

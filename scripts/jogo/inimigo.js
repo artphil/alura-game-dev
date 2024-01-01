@@ -3,6 +3,7 @@ class Inimigo extends Objeto {
     super(imagem, x, y, escala)
     this.velocidade_fator = fator;
     this.x_inicial = x;
+    this.na_tela = false;
   }
 
   anima() {
