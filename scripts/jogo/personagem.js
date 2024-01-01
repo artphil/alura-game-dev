@@ -43,18 +43,6 @@ class Personagem extends Objeto {
 
   }
 
-  direita() {
-    // if (velocidade_atual > 0)
-    //   if (this.img_x < (width - this.dx))
-    //     this.img_x += this.veloc_x;
-  }
-
-  esquerda() {
-    // if (velocidade_atual > 0)
-    //   if (this.img_x > 0)
-    //     this.img_x -= this.veloc_x;
-  }
-
   pula() {
     if (velocidade_atual > 0 && this.pulou < 2) {
       efeito_pulo.play();

@@ -108,9 +108,6 @@ class Jogo extends Cena {
     // Acelera com o tempo
     this.acelera();
 
-    if (keyIsDown(LEFT_ARROW)) personagem.esquerda();
-    if (keyIsDown(RIGHT_ARROW)) personagem.direita();
-
     // testa colisao
     if (personagem.colide(enemies)) {
       vida.perde()
