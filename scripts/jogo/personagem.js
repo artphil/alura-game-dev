@@ -3,6 +3,7 @@ class Personagem extends Objeto {
     super(imagem, x, y, escala)
 
     this.veloc_y = 0;
+    this.flutua = false;
     this.gravidade = height / 150;
     this.pulou = 0;
     this.invencivel = false;
@@ -30,7 +31,7 @@ class Personagem extends Objeto {
         this.pulou = 0;
       } else if (this.img_y < this.img_y_base) {
         this.img_y += this.veloc_y;
-        this.veloc_y += this.gravidade;
+        this.veloc_y = this.veloc_y < 0 ? this.veloc_y+this.gravidade: this.flutua ? this.gravidade : this.veloc_y+this.gravidade;
       } else this.img_y += this.veloc_y;
     }
   }
