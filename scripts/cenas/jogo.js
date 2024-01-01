@@ -25,7 +25,7 @@ class Jogo extends Cena {
     let scale_slime = 0.12
     let scale_big_slime = 0.17
     let scale_flyer = 0.15
-    let scale_big_flyer = 0.18
+    let scale_big_flyer = 0.20
 
     let speed_normal = 1
     let speed_slow = 0.8
@@ -51,10 +51,10 @@ class Jogo extends Cena {
     enemies.push(new Inimigo(enemy_data[3].sprite,  x_inicial, y_slime,      scale_slime,      speed_slow));   //slime green
     enemies.push(new Inimigo(enemy_data[4].sprite,  x_inicial, y_flyer_down, scale_big_flyer,  speed_slow));   //flyer pink
     enemies.push(new Inimigo(enemy_data[5].sprite,  x_inicial, y_slime,      scale_slime,      speed_slow));   //slime yellow
-    enemies.push(new Inimigo(enemy_data[6].sprite,  x_inicial, y_flyer,      scale_big_flyer,  speed_normal)); //flyer silver
-    enemies.push(new Inimigo(enemy_data[7].sprite,  x_inicial, y_slime,      scale_big_slime,  speed_normal)); //slime red 
+    enemies.push(new Inimigo(enemy_data[6].sprite,  x_inicial, y_flyer_down, scale_big_flyer,  speed_normal)); //flyer silver
+    enemies.push(new Inimigo(enemy_data[7].sprite,  x_inicial, y_big_slime,  scale_big_slime,  speed_normal)); //slime red 
     enemies.push(new Inimigo(enemy_data[8].sprite,  x_inicial, y_flyer,      scale_flyer,      speed_fast));   //flyer gold
-    enemies.push(new Inimigo(enemy_data[9].sprite,  x_inicial, y_slime,      scale_big_slime,  speed_fast));   //slime purple
+    enemies.push(new Inimigo(enemy_data[9].sprite,  x_inicial, y_big_slime,  scale_big_slime,  speed_fast));   //slime purple
     enemies.push(new Inimigo(enemy_data[10].sprite, x_inicial, y_flyer_down, scale_flyer,      speed_fast));   //flyer black
     enemies.push(new Inimigo(enemy_data[11].sprite, x_inicial, y_slime,      scale_slime,      speed_fast));   //slime devil
 
