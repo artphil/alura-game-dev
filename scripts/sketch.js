@@ -41,7 +41,8 @@ function touchStarted() {
 	cenas[cena_atual].touchPress();
 	cenas[cena_atual].is_touch = true;
 }
-touchEnded() {
+
+function touchEnded() {
 	cenas[cena_atual].is_touch = false;
 }
 
