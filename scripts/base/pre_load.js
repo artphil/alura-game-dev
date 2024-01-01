@@ -18,7 +18,7 @@ function preload() {
   });
 
   enemy_data.forEach(enemy => {
-    enemy_img.push(loadImage(enemy.path));
+    enemy.image = loadImage(enemy.path)
   });
   
   
