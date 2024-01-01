@@ -15,7 +15,7 @@ class Personagem extends Objeto {
     if (this.pulou === 0) {
       this.imagem.proximo();
     } else {
-      this.imagem.atual = 0;
+      this.imagem.atual = this.veloc_y < 0 ? 0 : 12;
     }
 
     this.acao_gravidade()
@@ -31,7 +31,7 @@ class Personagem extends Objeto {
         this.pulou = 0;
       } else if (this.img_y < this.img_y_base) {
         this.img_y += this.veloc_y;
-        this.veloc_y = this.veloc_y < 0 ? this.veloc_y+this.gravidade: this.flutua ? this.gravidade : this.veloc_y+this.gravidade;
+        this.veloc_y = this.veloc_y < 0 ? this.veloc_y + this.gravidade : this.flutua ? this.gravidade : this.veloc_y + this.gravidade;
       } else this.img_y += this.veloc_y;
     }
   }
