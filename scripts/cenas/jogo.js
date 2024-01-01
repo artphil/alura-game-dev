@@ -29,19 +29,21 @@ class Jogo extends Cena {
     personagem = new Personagem(character_sprite[0], 10, (height * 0.75) - chao, 0.25);
 
     // Inimigo(imagem, x, y, escala, fator)
-    enemies.push(new Inimigo(enemy_sprite[0], -width, (height * 0.9) - chao, 0.12, 1)); //slime
-    enemies.push(new Inimigo(enemy_sprite[0], -width, (height * 0.9) - chao, 0.12, 1.5)); //slime
-    enemies.push(new Inimigo(enemy_sprite[1], -width, (height * 0.9) - chao, 0.12, 1)); //slime blue
-    enemies.push(new Inimigo(enemy_sprite[2], -width, (height * 0.6) - chao, 0.15, 1)); //flyer 
-    enemies.push(new Inimigo(enemy_sprite[3], -width, (height * 0.9) - chao, 0.12, 1)); //slime green
-    enemies.push(new Inimigo(enemy_sprite[4], -width, (height * 0.6) - chao, 0.15, 1)); //flyer pink
-    enemies.push(new Inimigo(enemy_sprite[5], -width, (height * 0.9) - chao, 0.12, 1)); //slime yellow
-    enemies.push(new Inimigo(enemy_sprite[6], -width, (height * 0.6) - chao, 0.15, 1)); //flyer silver
-    enemies.push(new Inimigo(enemy_sprite[7], -width, (height * 0.9) - chao, 0.12, 1)); //slime red 
-    enemies.push(new Inimigo(enemy_sprite[8], -width, (height * 0.6) - chao, 0.15, 1)); //flyer gold
-    enemies.push(new Inimigo(enemy_sprite[9], -width, (height * 0.9) - chao, 0.12, 1)); //slime purple
-    enemies.push(new Inimigo(enemy_sprite[10], -width, (height * 0.6) - chao, 0.15, 1)); //flyer black
-    enemies.push(new Inimigo(enemy_sprite[11], -width, (height * 0.9) - chao, 0.12, 1)); //slime devil
+   
+    enemies.push(new Inimigo(enemy_data[0].sprite, -width, (height * 0.9) - chao, 0.12, 1)); //slime
+    enemies.push(new Inimigo(enemy_data[0].sprite, -width, (height * 0.9) - chao, 0.12, 1.5)); //slime
+    enemies.push(new Inimigo(enemy_data[1].sprite, -width, (height * 0.9) - chao, 0.12, 1)); //slime blue
+    enemies.push(new Inimigo(enemy_data[2].sprite, -width, (height * 0.6) - chao, 0.15, 1)); //flyer 
+    enemies.push(new Inimigo(enemy_data[3].sprite, -width, (height * 0.9) - chao, 0.12, 1)); //slime green
+    enemies.push(new Inimigo(enemy_data[4].sprite, -width, (height * 0.6) - chao, 0.15, 1)); //flyer pink
+    enemies.push(new Inimigo(enemy_data[5].sprite, -width, (height * 0.9) - chao, 0.12, 1)); //slime yellow
+    enemies.push(new Inimigo(enemy_data[6].sprite, -width, (height * 0.6) - chao, 0.15, 1)); //flyer silver
+    enemies.push(new Inimigo(enemy_data[7].sprite, -width, (height * 0.9) - chao, 0.12, 1)); //slime red 
+    enemies.push(new Inimigo(enemy_data[8].sprite, -width, (height * 0.6) - chao, 0.15, 1)); //flyer gold
+    enemies.push(new Inimigo(enemy_data[9].sprite, -width, (height * 0.9) - chao, 0.12, 1)); //slime purple
+    enemies.push(new Inimigo(enemy_data[10].sprite, -width, (height * 0.6) - chao, 0.15, 1)); //flyer black
+    enemies.push(new Inimigo(enemy_data[11].sprite, -width, (height * 0.9) - chao, 0.12, 1)); //slime devil
+   console.log(enemies)
 
     item_vida = new Item(sprite_vida, -500, (height / 2), 0.1);
     vida = new Vida(sprite_vida, 3, 5);
@@ -120,7 +122,7 @@ class Jogo extends Cena {
 
         enemies[i].aparece(Math.pow(1.15, i));
         // enemies[i].aparece(random(1, 3));
-      } 
+      }
       else {
         this.contador -= 1;
       }

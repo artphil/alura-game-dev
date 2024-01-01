@@ -1,18 +1,18 @@
 // Assets
 // Imagens
 const enemy_data = [
-	{name: 'slime',         path:'assets/imgs/inimigos/slime.png',},
-	{name: 'slime_blue',    path:'assets/imgs/inimigos/slime_blue.png',},
-	{name: 'flyer',         path:'assets/imgs/inimigos/flyer.png',},
-	{name: 'slime_green',   path:'assets/imgs/inimigos/slime_green.png',},
-	{name: 'flyer_pink',    path:'assets/imgs/inimigos/flyer_pink.png',},
-	{name: 'slime_yellow',  path:'assets/imgs/inimigos/slime_yellow.png',},
-	{name: 'flyer_silver',  path:'assets/imgs/inimigos/flyer_silver.png',},
-	{name: 'slime_red',     path:'assets/imgs/inimigos/slime_red.png',},
-	{name: 'flyer_gold',    path:'assets/imgs/inimigos/flyer_gold.png',},
-	{name: 'slime_purple',  path:'assets/imgs/inimigos/slime_purple.png',},
-	{name: 'flyer_black',   path:'assets/imgs/inimigos/flyer_black.png',},
-	{name: 'slime_devil',   path:'assets/imgs/inimigos/slime_devil.png',},
+	{name: 'slime',         path:'assets/imgs/inimigos/slime.png',        lines:7, cols:4, quant:28, reduct:1},
+	{name: 'slime_blue',    path:'assets/imgs/inimigos/slime_blue.png',   lines:7, cols:4, quant:28, reduct:1},
+	{name: 'flyer',         path:'assets/imgs/inimigos/flyer.png',        lines:6, cols:3, quant:16, reduct:3},
+	{name: 'slime_green',   path:'assets/imgs/inimigos/slime_green.png',  lines:7, cols:4, quant:28, reduct:1},
+	{name: 'flyer_pink',    path:'assets/imgs/inimigos/flyer_pink.png',   lines:6, cols:3, quant:16, reduct:3},
+	{name: 'slime_yellow',  path:'assets/imgs/inimigos/slime_yellow.png', lines:7, cols:4, quant:28, reduct:1},
+	{name: 'flyer_silver',  path:'assets/imgs/inimigos/flyer_silver.png', lines:6, cols:3, quant:16, reduct:3},
+	{name: 'slime_red',     path:'assets/imgs/inimigos/slime_red.png',    lines:7, cols:4, quant:28, reduct:1},
+	{name: 'flyer_gold',    path:'assets/imgs/inimigos/flyer_gold.png',   lines:6, cols:3, quant:16, reduct:3},
+	{name: 'slime_purple',  path:'assets/imgs/inimigos/slime_purple.png', lines:7, cols:4, quant:28, reduct:1},
+	{name: 'flyer_black',   path:'assets/imgs/inimigos/flyer_black.png',  lines:6, cols:3, quant:16, reduct:3},
+	{name: 'slime_devil',   path:'assets/imgs/inimigos/slime_devil.png',  lines:7, cols:4, quant:28, reduct:1},
 ]
 
 const character_img_path = [
