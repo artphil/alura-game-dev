@@ -16,6 +16,13 @@ class Jogo extends Cena {
   setup() {
     // Variaveis
     chao = height * 0.07;
+    x_inicial = -100
+    y_slime = (height * 0.9) - chao
+    y_flyer = (height * 0.6) - chao
+    scale_slime = 0.12
+    scale_flyer = 0.15
+    speed_normal = 1
+
     velocidade_inicial = this.velocidade_inicial;
     inimigo_maximo = this.inimigo_maximo;
     // ultimos_inimigos = this.ultimos_inimigos;
@@ -30,19 +37,19 @@ class Jogo extends Cena {
 
     // Inimigo(imagem, x, y, escala, fator)
    
-    enemies.push(new Inimigo(enemy_data[0].sprite, -width, (height * 0.9) - chao, 0.12, 1)); //slime
-    enemies.push(new Inimigo(enemy_data[0].sprite, -width, (height * 0.9) - chao, 0.12, 1.5)); //slime
-    enemies.push(new Inimigo(enemy_data[1].sprite, -width, (height * 0.9) - chao, 0.12, 1)); //slime blue
-    enemies.push(new Inimigo(enemy_data[2].sprite, -width, (height * 0.6) - chao, 0.15, 1)); //flyer 
-    enemies.push(new Inimigo(enemy_data[3].sprite, -width, (height * 0.9) - chao, 0.12, 1)); //slime green
-    enemies.push(new Inimigo(enemy_data[4].sprite, -width, (height * 0.6) - chao, 0.15, 1)); //flyer pink
-    enemies.push(new Inimigo(enemy_data[5].sprite, -width, (height * 0.9) - chao, 0.12, 1)); //slime yellow
-    enemies.push(new Inimigo(enemy_data[6].sprite, -width, (height * 0.6) - chao, 0.15, 1)); //flyer silver
-    enemies.push(new Inimigo(enemy_data[7].sprite, -width, (height * 0.9) - chao, 0.12, 1)); //slime red 
-    enemies.push(new Inimigo(enemy_data[8].sprite, -width, (height * 0.6) - chao, 0.15, 1)); //flyer gold
-    enemies.push(new Inimigo(enemy_data[9].sprite, -width, (height * 0.9) - chao, 0.12, 1)); //slime purple
-    enemies.push(new Inimigo(enemy_data[10].sprite, -width, (height * 0.6) - chao, 0.15, 1)); //flyer black
-    enemies.push(new Inimigo(enemy_data[11].sprite, -width, (height * 0.9) - chao, 0.12, 1)); //slime devil
+    enemies.push(new Inimigo(enemy_data[0].sprite,  x_inicial, y_slime, scale_slime, speed_normal)); //slime
+    enemies.push(new Inimigo(enemy_data[0].sprite,  x_inicial, y_slime, scale_slime, speed_normal)); //slime grande
+    enemies.push(new Inimigo(enemy_data[1].sprite,  x_inicial, y_slime, scale_slime, speed_normal)); //slime blue
+    enemies.push(new Inimigo(enemy_data[2].sprite,  x_inicial, y_flyer, scale_flyer, speed_normal)); //flyer 
+    enemies.push(new Inimigo(enemy_data[3].sprite,  x_inicial, y_slime, scale_slime, speed_normal)); //slime green
+    enemies.push(new Inimigo(enemy_data[4].sprite,  x_inicial, y_flyer, scale_flyer, speed_normal)); //flyer pink
+    enemies.push(new Inimigo(enemy_data[5].sprite,  x_inicial, y_slime, scale_slime, speed_normal)); //slime yellow
+    enemies.push(new Inimigo(enemy_data[6].sprite,  x_inicial, y_flyer, scale_flyer, speed_normal)); //flyer silver
+    enemies.push(new Inimigo(enemy_data[7].sprite,  x_inicial, y_slime, scale_slime, speed_normal)); //slime red 
+    enemies.push(new Inimigo(enemy_data[8].sprite,  x_inicial, y_flyer, scale_flyer, speed_normal)); //flyer gold
+    enemies.push(new Inimigo(enemy_data[9].sprite,  x_inicial, y_slime, scale_slime, speed_normal)); //slime purple
+    enemies.push(new Inimigo(enemy_data[10].sprite, x_inicial, y_flyer, scale_flyer, speed_normal)); //flyer black
+    enemies.push(new Inimigo(enemy_data[11].sprite, x_inicial, y_slime, scale_slime, speed_normal)); //slime devil
    console.log(enemies)
 
     item_vida = new Item(sprite_vida, -500, (height / 2), 0.1);
