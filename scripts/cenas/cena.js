@@ -1,5 +1,7 @@
 class Cena {
-  constructor(){}
+  constructor(){
+    this.is_touch = false;
+  }
   
   setup(){}
   

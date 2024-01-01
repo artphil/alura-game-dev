@@ -39,6 +39,10 @@ function mousePressed() {
 }
 function touchStarted() {
 	cenas[cena_atual].touchPress();
+	cenas[cena_atual].is_touch = true;
+}
+touchEnded() {
+	cenas[cena_atual].is_touch = false;
 }
 
 // Desenho do frame

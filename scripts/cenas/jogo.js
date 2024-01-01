@@ -94,7 +94,7 @@ class Jogo extends Cena {
     pontos.exibe();
     pontos.add();
 
-    personagem.flutua = keyIsDown(CONTROL) || keyIsDown(32)
+    personagem.flutua = this.is_touch || keyIsDown(CONTROL) || keyIsDown(32) 
     personagem.desenha();
 
     enemies.forEach(inimigo => {
