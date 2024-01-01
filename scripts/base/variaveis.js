@@ -1,19 +1,19 @@
 // Assets
 // Imagens
-const enemy_img_path = [
-	'assets/imgs/inimigos/slime.png',
-	'assets/imgs/inimigos/slime_blue.png',
-	'assets/imgs/inimigos/flyer.png',
-	'assets/imgs/inimigos/slime_green.png',
-	'assets/imgs/inimigos/flyer_pink.png',
-	'assets/imgs/inimigos/slime_yellow.png',
-	'assets/imgs/inimigos/flyer_silver.png',
-	'assets/imgs/inimigos/slime_red.png',
-	'assets/imgs/inimigos/flyer_gold.png',
-	'assets/imgs/inimigos/slime_purple.png',
-	'assets/imgs/inimigos/flyer_black.png',
-	'assets/imgs/inimigos/slime_devil.png',
-];
+const enemy_data = [
+	{name: 'slime',         path:'assets/imgs/inimigos/slime.png',},
+	{name: 'slime_blue',    path:'assets/imgs/inimigos/slime_blue.png',},
+	{name: 'flyer',         path:'assets/imgs/inimigos/flyer.png',},
+	{name: 'slime_green',   path:'assets/imgs/inimigos/slime_green.png',},
+	{name: 'flyer_pink',    path:'assets/imgs/inimigos/flyer_pink.png',},
+	{name: 'slime_yellow',  path:'assets/imgs/inimigos/slime_yellow.png',},
+	{name: 'flyer_silver',  path:'assets/imgs/inimigos/flyer_silver.png',},
+	{name: 'slime_red',     path:'assets/imgs/inimigos/slime_red.png',},
+	{name: 'flyer_gold',    path:'assets/imgs/inimigos/flyer_gold.png',},
+	{name: 'slime_purple',  path:'assets/imgs/inimigos/slime_purple.png',},
+	{name: 'flyer_black',   path:'assets/imgs/inimigos/flyer_black.png',},
+	{name: 'slime_devil',   path:'assets/imgs/inimigos/slime_devil.png',},
+]
 
 const character_img_path = [
 	'assets/imgs/personagem/sakura.png'

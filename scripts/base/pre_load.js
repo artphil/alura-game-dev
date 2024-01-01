@@ -17,8 +17,8 @@ function preload() {
     character_img.push(loadImage(img_path));
   });
 
-  enemy_img_path.forEach(img_path => {
-    enemy_img.push(loadImage(img_path));
+  enemy_data.forEach(enemy => {
+    enemy_img.push(loadImage(enemy.path));
   });
   
   
