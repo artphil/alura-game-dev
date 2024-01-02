@@ -14,15 +14,17 @@ function setup() {
 	inicio = new Inicio();
 	creditos = new Creditos();
 	game_over = new Game_over();
+	erro = new Erro();
 
 	cenas = {
 		jogo,
 		inicio,
 		creditos,
-		game_over
+		game_over,
+		erro
 	};
 
-	cena_atual = 'inicio';
+	cena_atual = (w > h)? 'inicio' : 'erro';
 
 	jogo.setup();
 	inicio.setup();

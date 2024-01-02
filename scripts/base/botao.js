@@ -8,8 +8,9 @@ class BotaoCena {
     this.dy = 2 * this.tamanho_texto;
     this.cena = cena;
     this.x0 = x - (this.dx / 2);
-    this.y0 = y - (3*this.dy / 5);
+    this.y0 = y - (3 * this.dy / 5);
     this.cor = 0;
+    this.restart = false;
   }
 
   draw() {
@@ -30,7 +31,13 @@ class BotaoCena {
   }
 
   _altera_cena() {
-    cenas[this.cena].restart();
-    cena_atual = this.cena;
+
+    if (this.restart) { 
+      window.location.reload()
+    }
+    else {
+      cenas[this.cena].reset();
+      cena_atual = this.cena;
+    }
   }
 }
