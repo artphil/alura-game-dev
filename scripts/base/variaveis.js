@@ -102,8 +102,6 @@ const characters = [];
 let personagem;
 
 // Inimigos
-const enemy_img = [];
-const enemy_sprite = [];
 const enemies = [];
 let ultimos_inimigos;
 let inimigo_maximo;
