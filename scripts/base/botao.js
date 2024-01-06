@@ -36,7 +36,7 @@ class BotaoCena {
       window.location.reload()
     }
     else {
-      cenas[this.cena].reset();
+      cenas[this.cena].restart();
       cena_atual = this.cena;
     }
   }
